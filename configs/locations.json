@@ -1,0 +1,4 @@
+{
+  "default_region": "us-east-1",
+  "regions": ["us-east-1", "us-west-2", "europe-west1", "asia-southeast1"]
+}

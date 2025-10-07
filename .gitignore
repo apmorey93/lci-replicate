@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+results/
+data/processed/
+checksums/
+.DS_Store

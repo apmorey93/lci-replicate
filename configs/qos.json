@@ -1,0 +1,8 @@
+{
+  "latency_ms": 250.0,
+  "accuracy_threshold": 0.80,
+  "reliability_threshold": 0.995,
+  "safety_threshold": 0.98,
+  "epsilon": 0.05,
+  "weights": { "a": 1.0, "l": 1.0, "q": 1.0, "s": 1.0 }
+}
