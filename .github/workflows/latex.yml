@@ -1,0 +1,16 @@
+name: Build LaTeX
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live minimal
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra latexmk
+      - name: Build PDF
+        run: latexmk -pdf -interaction=nonstopmode -halt-on-error lci_paper.tex
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: lci_paper
+          path: lci_paper.pdf

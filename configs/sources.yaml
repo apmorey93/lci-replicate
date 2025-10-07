@@ -1,0 +1,19 @@
+items:
+  - name: cloud_prices
+    url: https://example.org/cloud_prices.csv
+    out: cloud_prices.csv
+  - name: energy_tariffs
+    url: https://example.org/energy_tariffs.csv
+    out: energy_tariffs.csv
+  - name: rtt_matrix
+    url: https://example.org/rtt_matrix.csv
+    out: rtt_matrix.csv
+  - name: benchmarks
+    url: https://example.org/benchmarks.csv
+    out: benchmarks.csv
+  - name: reliability
+    url: https://example.org/reliability.csv
+    out: reliability.csv
+  - name: safety
+    url: https://example.org/safety.csv
+    out: safety.csv

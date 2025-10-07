@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,booktabs,siunitx,graphicx,hyperref}
+\title{The Cost of Usable Intelligence: Measuring AI's Economic Productivity Frontier}
+\author{LCI Replication Team}
+\date{July 2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We provide a replication-ready pipeline for estimating the Latent Capacity Index (LCI) and associated productivity dynamics. The workflows here reproduce all tables, figures, and the PDF using a single command.
+\end{abstract}
+
+\section{Introduction}
+Artificial intelligence systems combine compute, energy, network, and model quality constraints. This replication package reconstructs each component from public data releases and aggregates them into a productivity frontier.
+
+\section{Data Sources}
+Raw artifacts are fetched via \texttt{scripts/fetch\_and\_pin.py}. Table~\ref{tab:sources} summarizes the pinned public files, while Table~\ref{tab:primitives} lists the derived primitives required by the production pipeline.
+
+\section{Methodology}
+Our approach follows a three-stage pipeline: data cleaning, estimation of the productivity curve, and uncertainty quantification. The Makefile orchestrates these stages, ensuring deterministic inputs, versioned configurations, and documented outputs.
+
+\section{Results}
+Running \texttt{make all} regenerates the key estimates and visualizations. The resulting PDF embeds the figures exported to the \texttt{results/figures} directory and summarizes the productivity trends through 2025Q2.
+
+\section{Discussion}
+The replication framework demonstrates how transparent infrastructure can lower the barriers to evaluating AI production frontiers. Researchers can adapt the configuration files to test alternative latency requirements, pricing scenarios, or reliability thresholds.
+
+\section{Data Availability}
+All data dependencies are fetched from public URLs enumerated in \texttt{configs/sources.yaml}. Checksums are recorded in \texttt{checksums/hashes.sha256} after executing \texttt{make data}. Processed datasets are written to \texttt{data/processed/} and may be regenerated using the provided scripts.
+
+\section{Conclusion}
+This package consolidates the computational and documentation artifacts necessary to reproduce the Latent Capacity Index and related indicators.
+
+\begin{table}[t]
+  \centering
+  \caption{Pinned source artifacts}
+  \label{tab:sources}
+  \input{results/tables/sources_table.tex}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \caption{Core data primitives}
+  \label{tab:primitives}
+  \input{results/tables/primitives_table.tex}
+\end{table}
+
+\end{document}
